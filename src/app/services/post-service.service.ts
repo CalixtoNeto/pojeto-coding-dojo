@@ -13,13 +13,19 @@ export class PostService {
 
     window.localStorage.setItem('posts',JSON.stringify(posts))
 
-    console.log(posts)
 
   }
 
   buscarTodos(): Post[] {
     return JSON.parse(window.localStorage.getItem('posts')) || [];
   }
+  buscarPostPrincipal(){
+    const posts = this.buscarTodos();
+
+    return posts[0]
+  }
+
+
 
   constructor() { }
 }
