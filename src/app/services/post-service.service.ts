@@ -12,8 +12,6 @@ export class PostService {
     posts.push(post);
 
     window.localStorage.setItem('posts',JSON.stringify(posts))
-
-
   }
 
   buscarTodos(): Post[] {

@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { PostPrincipalComponent } from './home/post-principal/post-principal.component';
 import { PostSecundarioComponent } from './home/post-secundario/post-secundario.component';
+import { PostService } from './services/post-service.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { PostSecundarioComponent } from './home/post-secundario/post-secundario.
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

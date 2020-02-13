@@ -3,18 +3,15 @@ import { Post } from '../models/post.model';
 import { PostService } from '../services/post-service.service';
 
 
-
-
 @Component({
   selector: 'app-form',
-  templateUrl: './form.component.html',
-  providers:[PostService]
+  templateUrl: './form.component.html'
 
 })
 export class FormComponent implements OnInit {
 
   post: Post = new Post();
-  posts = []
+
 
   constructor(private postService:PostService) { }
 
