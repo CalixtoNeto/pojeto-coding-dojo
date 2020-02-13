@@ -16,20 +16,21 @@ export class FormComponent implements OnInit {
   post: Post = new Post();
   posts = []
 
-  constructor() { }
+  constructor(private postService:PostService) { }
 
   ngOnInit(): void {
   }
 
+  onSubmit(){
+    this.postService.salvar(this.post)
+
+  }
+
   // onSubmit(){
 
+  //   this.posts.push(this.post)
+  //   console.log(this.post)
+  //   console.log(this.posts)
   // }
-
-  onSubmit(){
-
-    this.posts.push(this.post)
-    console.log(this.post)
-    console.log(this.posts)
-  }
 
 }
