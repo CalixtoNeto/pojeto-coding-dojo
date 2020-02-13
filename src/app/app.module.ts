@@ -21,7 +21,8 @@ import { PostSecundarioComponent } from './home/post-secundario/post-secundario.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
