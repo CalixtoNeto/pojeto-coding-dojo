@@ -15,7 +15,12 @@ export class PostService {
   }
 
   buscarTodos(): Post[] {
-    return JSON.parse(window.localStorage.getItem('posts')) || [];
+    return JSON.parse(window.localStorage.getItem('posts')) || {
+      autor:"Autor",
+      titulo:"Titulo",
+      data:"00/00/0000",
+      conteudo:"Conteudo",
+    };
   }
   buscarPostPrincipal(){
     const posts = this.buscarTodos();

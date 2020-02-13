@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from 'src/app/models/post.model';
 import { PostService } from 'src/app/services/post-service.service';
 
 @Component({
@@ -8,11 +7,17 @@ import { PostService } from 'src/app/services/post-service.service';
 })
 export class PostSecundarioComponent implements OnInit {
 
-  post: Post = new Post();
+  posts = []
 
   constructor(private postService:PostService) { }
 
   ngOnInit(): void {
+   this.posts = this.postService.buscarTodos();
+
+
+  console.log(this.posts)
+
   }
+
 
 }
